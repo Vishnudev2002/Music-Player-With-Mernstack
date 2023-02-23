@@ -65,7 +65,7 @@ const Header = () => {
             {user?.user.name}
           </p>
           <p className="flex items-center gap-2 text-xs text-gray-500 font-normal">
-            Premium Member,{" "}
+            {user?.user?.role.toUpperCase()}
             <FaCrown className="text-sm -ml-1 text-yellow-500" />
           </p>
         </div>
@@ -76,6 +76,12 @@ const Header = () => {
             exit={{ opacity: 0, y: 50 }}
             className="absolute z-10 flex flex-col top-12 p-3 right-0 w-275 gap-2 bg-card shadow-lg rounded-lg backdrop-blur-sm"
           >
+            <NavLink to={"/userProfile"}>
+              <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                Home
+              </p>
+            </NavLink>
+            <hr />
             {user?.user?.role === "admin" && (
               <>
                 <NavLink to={"/dashboard/home"}>
