@@ -52,7 +52,7 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="w-full flex items-center gap-3">
+    <div className="w-full flex items-center gap-3 w-screen">
       <div className={`w-full items-center flex gap-3 p-4 relative`}>
         <img
           src={allSongs[songIndex].imageURL}
